@@ -18,14 +18,22 @@ while True:
             S = float(input("Insira o valor da posição final: "))
             S0 = float(input("Insira o valor da posição inicial: "))
             V0 = float(input("Insira a velocidade inicial: "))
+            V = float(input("Insira a velocidade final: "))
             T0 = float(input("Insira o tempo inicial: "))
             T = float(input("Insira o tempo final: "))
             a = float(input("Insira a aceleração: "))
         except:
             print("Valor inválido!")
-        print(S, S0, V0, T0, T, a)
-        if (S !=0 and a == 0):
-            print(f"O resultado é {S-S0} .")
+        else:
+            print(S, S0, V0, T0, T, a)
+            if (S !=0 and a == 0):
+                print(f"O resultado é {S-S0} .")
+            elif (V != 0 and T != 0 and a == 0 ):
+                print(f"O resultado é {V*(T-T0)} .")
+            elif (a != 0):
+                print(f"{V0*T+((a*T**2)/2)}")
+            else:
+                print("Não foi possível calcular!")
 
     elif opcao == "2":
         ""
